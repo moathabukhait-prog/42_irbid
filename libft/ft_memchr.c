@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:30:46 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/09 12:44:35 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/09 13:53:29 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/09 15:20:21 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdded.h>
+#include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char			*des;
-	const unsigned char		*sou;
-	size_t const			i;
+	const unsigned char	*ptr;
+	size_t				i;
 
-	dst = (unsigned char *)dest;
-	sou = (const unsigned char *)src;
+	ptr = (const unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		dst[i] = sou[i];
+		if (ptr[i] == (unsigned char)c)
+			return ((void *)&ptr[i]);
 		i++;
 	}
-	return (dest);
+	return (NULL);
 }
