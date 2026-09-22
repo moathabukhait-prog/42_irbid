@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:30:46 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/16 10:08:03 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/09 17:45:22 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/21 16:18:21 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdded.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_atoi(char *str)
 {
-	unsigned char		*des;
-	const unsigned char	*sou;
-	size_t const		i;
+	unsigned long	sum;
+	int				i;
+	int				sign;
 
-	dst = (unsigned char *)dest;
-	sou = (const unsigned char *)src;
 	i = 0;
-	while (i < n)
+	sum = 0;
+	sign = 1;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
 	{
-		dst[i] = sou[i];
+		sign *= -1;
 		i++;
 	}
-	return (dest);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		sum = (sum * 10) + (str[i] - '0');
+		i++;
+	}
+	return (sign * sum);
 }

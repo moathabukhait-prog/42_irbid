@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:30:46 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/16 10:08:03 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/15 18:14:52 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/15 18:24:48 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdded.h>
+#include <unistd.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char		*des;
-	const unsigned char	*sou;
-	size_t const		i;
-
-	dst = (unsigned char *)dest;
-	sou = (const unsigned char *)src;
-	i = 0;
-	while (i < n)
+	if (n == -2147483648)
 	{
-		dst[i] = sou[i];
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	return (dest);
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		n = n % 10 + '0';
+		write(fd, &n, 1);
+	}
 }

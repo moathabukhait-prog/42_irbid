@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/12 16:21:58 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/12 16:22:13 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/13 11:00:17 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/15 13:25:42 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strdup(const char *s);
+int		ft_strlen(const char *str);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*w;
+	size_t	s_len;
 	size_t	i;
-	size_t	j;
 
-	if (needle[0] == '\0')
-		return ((char *)haystack);
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (len > s_len - start)
+		len = s_len - start;
+	w = malloc(sizeof(char) * (len + 1));
+	if (!w)
+		return (NULL);
 	i = 0;
-	while (haystack[i] && i < len)
+	while (i < len)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && needle[j] && (i + j) < len)
-		{
-			j++;
-		}
-		if (needle[j] == '\0')
-			return ((char *)&haystack[i]);
+		w[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	w[i] = '\0';
+	return (w);
 }

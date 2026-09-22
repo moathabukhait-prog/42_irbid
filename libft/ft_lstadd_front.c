@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:30:46 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/16 10:08:03 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/19 09:05:59 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/19 09:30:26 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdded.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned char		*des;
-	const unsigned char	*sou;
-	size_t const		i;
-
-	dst = (unsigned char *)dest;
-	sou = (const unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		dst[i] = sou[i];
-		i++;
-	}
-	return (dest);
+	new ->next = *lst;
+	*lst = new;
 }

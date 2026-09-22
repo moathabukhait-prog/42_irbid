@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:30:46 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/16 10:08:03 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/13 13:22:45 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/13 13:56:43 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdded.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+#include <stdlib.h>
+
+int		ft_strlen(const char *str);
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned char		*des;
-	const unsigned char	*sou;
-	size_t const		i;
+	int		i;
+	int		j;
+	char	*str;
 
-	dst = (unsigned char *)dest;
-	sou = (const unsigned char *)src;
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	while (s1[i])
 	{
-		dst[i] = sou[i];
+		str[i] = s1[i];
 		i++;
 	}
-	return (dest);
+	j = 0;
+	while (s2[j])
+	{
+		str[i] = s2[j];
+		i++;
+		j++;
+	}
+	str[i] = '\0';
+	return (str);
 }

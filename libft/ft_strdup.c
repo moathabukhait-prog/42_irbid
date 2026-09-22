@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 13:41:21 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/12 13:41:36 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/12 18:10:17 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/13 12:04:51 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include <stdlib.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	size_t	len_dst;
-	size_t	len_src;
-	size_t	i;
-	size_t	j;
+	char	*copy;
+	int		len;
+	int		i;
 
-	len_dst = 0;
-	len_src = 0;
-	while (src[len_src])
+	len = 0;
+	while (s[len])
 	{
-		len_src++;
+		len++;
 	}
-	while (len_dst < size && dst[len_dst])
-		len_dst++;
+	copy = malloc(len + 1);
+	if (!copy)
+		return (NULL);
 	i = 0;
-	j = len_dst;
-	while (len_dst < size && src[i] && len_dst + i + 1 < size)
-		dst[j++] = src[i++];
-	if (len_dst < size)
-		dst[j] = '\0';
-	return (len_dst + len_src);
+	while (s[i])
+	{
+		copy[i] = s[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
 }

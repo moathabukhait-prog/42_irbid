@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 13:41:21 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/12 13:41:36 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/12 15:32:50 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/21 16:14:27 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
+#include <stdlib.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*calloc(size_t n, size_t size)
 {
-	size_t	len_dst;
-	size_t	len_src;
-	size_t	i;
-	size_t	j;
+	unsigned char	*ptr;
+	size_t			total;
+	size_t			i;
 
-	len_dst = 0;
-	len_src = 0;
-	while (src[len_src])
-	{
-		len_src++;
-	}
-	while (len_dst < size && dst[len_dst])
-		len_dst++;
+	if (n <= 0 || size <= 0)
+		return (malloc(0));
+	else if ((SIZE_MAX / size) < n)
+		return (NULL);
+	total = n * size;
+	ptr = malloc(total);
+	if (!ptr)
+		return (NULL);
 	i = 0;
-	j = len_dst;
-	while (len_dst < size && src[i] && len_dst + i + 1 < size)
-		dst[j++] = src[i++];
-	if (len_dst < size)
-		dst[j] = '\0';
-	return (len_dst + len_src);
+	while (total--)
+	{
+		ptr[i] = 0;
+		i++;
+	}
+	return (ptr);
 }

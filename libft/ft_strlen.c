@@ -6,11 +6,11 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 12:10:51 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/07 14:08:37 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/13 12:08:14 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_istrlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 

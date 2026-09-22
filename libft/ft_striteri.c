@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:30:46 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/16 10:08:03 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/17 12:41:34 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/17 13:19:06 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdded.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+#include <stdlib.h>
+
+void	ft_striteri(char *s, void (*f) (unsigned int, char*))
 {
-	unsigned char		*des;
-	const unsigned char	*sou;
-	size_t const		i;
+	unsigned int		i;
 
-	dst = (unsigned char *)dest;
-	sou = (const unsigned char *)src;
 	i = 0;
-	while (i < n)
+	while (s[i])
 	{
-		dst[i] = sou[i];
+		f(i, &s[i]);
 		i++;
 	}
-	return (dest);
 }

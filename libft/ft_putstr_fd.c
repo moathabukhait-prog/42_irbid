@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/08 14:30:46 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/16 10:08:03 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/15 17:17:31 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/15 17:23:51 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdded.h>
+#include <unistd.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned char		*des;
-	const unsigned char	*sou;
-	size_t const		i;
+	int	i;
 
-	dst = (unsigned char *)dest;
-	sou = (const unsigned char *)src;
 	i = 0;
-	while (i < n)
+	while (s[i])
 	{
-		dst[i] = sou[i];
+		write(fd, &s[i], 1);
 		i++;
 	}
-	return (dest);
 }

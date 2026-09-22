@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/09 13:41:21 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/12 13:41:36 by mabukhai         ###   ########.fr       */
+/*   Created: 2026/09/17 12:13:47 by mabukhai          #+#    #+#             */
+/*   Updated: 2026/09/17 12:37:20 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include <stdlib.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len_dst;
-	size_t	len_src;
-	size_t	i;
-	size_t	j;
+	char			*result;
+	unsigned int	i;
+	unsigned int	len;
 
-	len_dst = 0;
-	len_src = 0;
-	while (src[len_src])
+	if (!s || !f)
+		return (NULL);
+	len = 0;
+	while (s[len])
 	{
-		len_src++;
+		len++;
 	}
-	while (len_dst < size && dst[len_dst])
-		len_dst++;
+	result = malloc(sizeof(char) * (len + 1));
+	if (!result)
+		return (NULL);
 	i = 0;
-	j = len_dst;
-	while (len_dst < size && src[i] && len_dst + i + 1 < size)
-		dst[j++] = src[i++];
-	if (len_dst < size)
-		dst[j] = '\0';
-	return (len_dst + len_src);
+	while (s[i])
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }
