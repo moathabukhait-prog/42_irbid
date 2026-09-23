@@ -6,10 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 13:50:18 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/17 15:52:31 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:16:52 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 static int	is_sep(char c, char sep)
 {

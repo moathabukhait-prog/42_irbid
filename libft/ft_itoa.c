@@ -6,10 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 08:54:25 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/16 09:57:44 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:16:15 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 int	num_len(long n)
 {

@@ -6,9 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 13:09:38 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/07 14:10:02 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:27:42 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

@@ -6,10 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 18:10:17 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/13 12:04:51 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:33:48 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

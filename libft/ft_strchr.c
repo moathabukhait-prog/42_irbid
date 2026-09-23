@@ -6,9 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 10:52:22 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/08 11:20:56 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:29:41 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

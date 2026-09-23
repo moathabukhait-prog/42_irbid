@@ -6,9 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 12:20:55 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/07 14:08:56 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:28:21 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

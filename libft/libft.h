@@ -6,7 +6,7 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/19 08:12:53 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/22 13:31:34 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/22 14:54:57 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stddef.h>
 
 typedef struct s_list
 {

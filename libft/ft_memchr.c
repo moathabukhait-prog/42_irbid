@@ -6,10 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 13:53:29 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/09 15:20:21 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:30:36 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,9 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 12:10:51 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/13 12:08:14 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:23:39 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {

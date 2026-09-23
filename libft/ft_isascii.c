@@ -6,9 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 11:47:49 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/07 14:10:43 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:25:33 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

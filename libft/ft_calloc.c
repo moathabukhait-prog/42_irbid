@@ -6,11 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 15:32:50 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/21 16:14:27 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 08:56:09 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*calloc(size_t n, size_t size)
 {
@@ -20,7 +19,7 @@ void	*calloc(size_t n, size_t size)
 
 	if (n <= 0 || size <= 0)
 		return (malloc(0));
-	else if ((SIZE_MAX / size) < n)
+	else if (((size_t)-1 / size) < n)
 		return (NULL);
 	total = n * size;
 	ptr = malloc(total);

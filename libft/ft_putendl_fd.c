@@ -6,10 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 17:24:28 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/15 18:00:16 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:13:03 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

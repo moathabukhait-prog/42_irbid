@@ -6,9 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 11:52:40 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/07 14:07:53 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:24:37 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

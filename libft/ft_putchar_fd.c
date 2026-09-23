@@ -6,10 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 17:09:40 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/15 17:14:18 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:14:35 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

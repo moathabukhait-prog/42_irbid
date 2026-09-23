@@ -6,11 +6,11 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 12:45:34 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/10 17:47:55 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:22:57 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int v, size_t num)
 {

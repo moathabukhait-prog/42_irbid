@@ -6,9 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 13:59:15 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/07 14:06:23 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:26:53 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 12:37:39 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/15 15:46:15 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:17:22 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c);
 int		ft_strlen(const char *str);

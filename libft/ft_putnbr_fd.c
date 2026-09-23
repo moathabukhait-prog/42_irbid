@@ -6,10 +6,10 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 18:14:52 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/15 18:24:48 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 09:12:29 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
