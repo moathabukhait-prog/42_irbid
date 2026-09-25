@@ -6,13 +6,11 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 13:22:45 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/23 09:17:54 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/23 18:01:23 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(const char *str);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
