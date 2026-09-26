@@ -6,25 +6,26 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 17:45:22 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/23 09:32:55 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/26 11:10:35 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	unsigned long	sum;
-	int				i;
-	int				sign;
+	int	sum;
+	int	i;
+	int	sign;
 
 	i = 0;
 	sum = 0;
 	sign = 1;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign *= -1;
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')

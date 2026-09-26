@@ -6,7 +6,7 @@
 #    By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/22 15:20:28 by mabukhai          #+#    #+#              #
-#    Updated: 2026/09/22 15:21:16 by mabukhai         ###   ########.fr        #
+#    Updated: 2026/09/26 09:25:31 by mabukhai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,12 @@ SRC = ft_bzero.c \
         ft_lstnew.c \
         ft_lstadd_front.c \
         ft_lstsize.c \
-        ft_lstlast.c
+        ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -72,3 +77,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean 

@@ -6,7 +6,7 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 16:23:33 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/21 17:17:18 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/26 09:46:15 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -31,5 +31,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&new_list, new_node);
 		lst = lst->next;
 	}
-	return (NULL);
+	return (new_list);
 }

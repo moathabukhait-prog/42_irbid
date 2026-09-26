@@ -6,12 +6,12 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 15:32:50 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/09/23 08:56:09 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/09/26 11:26:16 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*calloc(size_t n, size_t size)
+void	*ft_calloc(size_t n, size_t size)
 {
 	unsigned char	*ptr;
 	size_t			total;
