@@ -40,7 +40,7 @@
 }*/
 void *my_f(void *content)
 {
-	return (ft_strdup((char *)content)):
+	return (ft_strdup((char *)content));
 
 }
 void del (void *content)
@@ -54,8 +54,9 @@ int main()
 	 t_list *new;
         t_list *tem;
         lst = ft_lstnew(ft_strdup("moath abusham "));
-        new = ft_lstnew(ft_strdup("yazeed abubarkat"));
-	tem = lst;
+	       ft_lstadd_back(&lst ,ft_lstnew(ft_strdup("yazeed abubarkat")));
+	new = ft_lstmap(lst,my_f,del);
+	tem = new;
         while(tem)
         {
                 printf("%s\n" , (char*)tem->content);
