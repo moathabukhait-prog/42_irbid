@@ -6,12 +6,12 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 16:21:42 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/10/03 17:47:23 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/10/04 16:07:34 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_putnpr(int n)
 {
 	char	c;
 	int		len;
@@ -21,19 +21,20 @@ int	ft_putnbr(int n)
 		write(1, "-2147483648", 11);
 		return (11);
 	}
+	len = 0;
 	if (n < 0)
 	{
-		write(fd, "-", 1);
+		write(1, "-", 1);
 		n = -n;
 		len++;
 	}
 	if (n >= 10)
 	{
-		ft_putnbr(n / 10);
+		ft_putnpr(n / 10);
 		n = n % 10 ;
 		len++;
 	}
 	c = n + '0';
-	write(fd, &c, 1);
+	write(1, &c, 1);
 	return (len);
 }

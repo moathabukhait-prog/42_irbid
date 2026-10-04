@@ -6,12 +6,12 @@
 /*   By: mabukhai <mabukhai@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 14:59:04 by mabukhai          #+#    #+#             */
-/*   Updated: 2026/10/03 15:04:02 by mabukhai         ###   ########.fr       */
+/*   Updated: 2026/10/04 16:31:55 by mabukhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int	putchar(int c)
+int	ft_putchar(int c)
 {
 	write(1, &c, 1);
 	return (1);
